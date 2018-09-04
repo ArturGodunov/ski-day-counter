@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 
 export const goal = (state=10, action) =>
     (action.type === C.SET_GOAL) ?
-        parseInt(action.payload) :
+        parseInt(action.payload, 10) :
         state;
 
 export const skiDay = (state=null, action) =>
