@@ -3,12 +3,11 @@ import './App.css';
 
 import C from './constants';
 import appReducer from './store/reducers';
-import initialState from './initialState.json';
 import { createStore } from 'redux';
 
-const store = createStore(appReducer, initialState);
+const store = createStore(appReducer);
 
-console.log(store.getState());
+store.subscribe(() => console.log(store.getState()));
 
 store.dispatch({
     type: C.ADD_DAY,
@@ -19,8 +18,6 @@ store.dispatch({
       'backcountry': true
     }
 });
-
-console.log(store.getState());
 
 
 
