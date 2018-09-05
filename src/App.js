@@ -9,7 +9,8 @@ import {
     addError,
     clearError,
     changeSuggestions,
-    clearSuggestions
+    clearSuggestions,
+    randomGoals
 } from './actions';
 
 const store = storeFactory();
@@ -39,6 +40,14 @@ store.dispatch(
 );
 
 store.dispatch(clearSuggestions());
+
+store.dispatch(
+    randomGoals()
+);
+
+store.dispatch(
+    randomGoals()
+);
 
 
 class App extends Component {
