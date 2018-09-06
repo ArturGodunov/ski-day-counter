@@ -3,8 +3,7 @@ const resorts = require('./resort-names.json');
 const { port = 3333, delay = 0 } = require('minimist')(process.argv);
 const cors = require('cors');
 
-const byName = name => resort =>
-    name.toLowerCase() === resort.substr(0, name.length).toLowerCase();
+const byName = name => resort => resort.toLowerCase().startsWith(name.toLowerCase());
 
 const logger = (req, res, next) => {
     console.log(`${req.method} request for ${req.url}`);

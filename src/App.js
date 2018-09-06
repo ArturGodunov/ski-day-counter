@@ -10,45 +10,49 @@ import {
     clearError,
     changeSuggestions,
     clearSuggestions,
-    randomGoals
+    randomGoals,
+    suggestResortNames
 } from './actions';
 
 const store = storeFactory();
 
-store.dispatch(
-    addDay('Mt Shasta', '2016-10-28')
-);
+// store.dispatch(
+//     addDay('Mt Shasta', '2016-10-28')
+// );
+//
+// store.dispatch(
+//     removeDay('2016-10-28')
+// );
+//
+// store.dispatch(
+//     setGoal(55)
+// );
+//
+// store.dispatch(
+//     addError("something went wrong")
+// );
+//
+// store.dispatch(
+//     clearError(0)
+// );
+//
+// store.dispatch(
+//     changeSuggestions(['One', 'Two', 'Three'])
+// );
+//
+// store.dispatch(clearSuggestions());
+//
+// store.dispatch(
+//     randomGoals()
+// );
+//
+// store.dispatch(
+//     randomGoals()
+// );
 
 store.dispatch(
-    removeDay('2016-10-28')
+    suggestResortNames('hea')
 );
-
-store.dispatch(
-    setGoal(55)
-);
-
-store.dispatch(
-    addError("something went wrong")
-);
-
-store.dispatch(
-    clearError(0)
-);
-
-store.dispatch(
-    changeSuggestions(['One', 'Two', 'Three'])
-);
-
-store.dispatch(clearSuggestions());
-
-store.dispatch(
-    randomGoals()
-);
-
-store.dispatch(
-    randomGoals()
-);
-
 
 class App extends Component {
   render() {
